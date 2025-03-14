@@ -1,0 +1,20 @@
+<div class="calendar">
+    <div class="calendar-header">
+      <button (click)="previousMonth()">Previous</button>
+      <span>{{ currentMonth | date: 'MMMM yyyy' }}</span>
+      <button (click)="nextMonth()">Next</button>
+    </div>
+    <div class="calendar-grid">
+      <div class="calendar-day" *ngFor="let day of days">
+        <span>{{ day.date | date: 'd' }}</span>
+        <div class="events">
+          <div *ngFor="let event of day.events">
+            {{ event.title }}
+            <button (click)="editEvent(event)">Edit</button>
+            <button (click)="deleteEvent(event)">Delete</button>
+          </div>
+        </div>
+        <button (click)="addEvent(day)">Add Event</button>
+      </div>
+    </div>
+  </div>

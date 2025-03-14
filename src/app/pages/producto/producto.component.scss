@@ -1,0 +1,81 @@
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+  
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+  
+    // Responsive adjustments
+    @media (max-width: 768px) {
+      .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    .calendar-day {
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; // Ensures inner elements use full width
+  
+      // Styling for a list of event cards within a day
+      .events {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; // Space between event cards
+  
+        // Event card styling
+        > div {
+          background-color: #f9f9f9;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          min-height: 60px;
+          position: relative;
+  
+          // Ensure there is some separation between the event description and the buttons
+          .event-buttons {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
+          }
+        }
+  
+        // If the buttons are not wrapped in an explicit container, this will reduce side margins
+        button {
+          margin: 0 2px;
+        }
+      }
+  
+      // "Add Event" button styling for each day
+      > button {
+        margin-top: 10px;
+        align-self: center;
+      }
+    }
+  }
+  
