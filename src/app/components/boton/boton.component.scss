@@ -1,0 +1,93 @@
+#texto {
+  margin-top: 5%;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#fondo {
+  background-color: #669999;
+  justify-self: center;
+  width: 50%;
+  border-radius: 8px;
+}
+#texto h1 {
+  color: #336699;
+  display: flex;
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#division {
+  margin: 20px;
+  justify-self: center;
+  background-color: #336699;
+  width: 25%;
+  height: 10px;
+}
+#container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120%;
+}
+
+#card {
+  background-color: #336699;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#titulo {
+  width: 100%;
+  height: auto;
+}
+
+#titulo h1 {
+  color: #ffffcc;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#cuerpo {
+  font-size: 15px;
+  color: #ffffcc;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #ffffcc;
+  color: #336699;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="ENVIAR"]:hover {
+  background-color: #0056b3;
+}
